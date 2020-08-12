@@ -64,20 +64,23 @@ mkswap $SWAPTARGET
 swapon $SWAPTARGET
 ```
 ### Building a toolchain with crosstool-ng
-On the Arch ARM device, build and install the latest commit from [crosstool-ng-git](https://aur.archlinux.org/packages/crosstool-ng-git/).
-
+On the Arch ARM device, build and install [crosstool-ng-git](https://aur.archlinux.org/packages/crosstool-ng-git/).  Users of other distros, be sure to look in the pull requests against [crosstool-ng](https://github.com/crosstool-ng/crosstool-ng/pulls) and apply any as needed if you are wanting to build the latest toolchain as development on crosstool-ng lags a bit.
 
 Take the [config](https://github.com/graysky2/crosstool-ng_for_distcc/blob/master/config) file from this repo and run the build:
 
 ```
-mkdir /scratch/tcbuild && cd /scratch/tcbuild
+$BUILDDIR=/scratch/ct_build
+
+mkdir $BUILDDIR && cd $BUILDDIR
 wget -O .config https://github.com/graysky2/crosstool-ng_for_distcc/blob/master/config
 ct-ng build
 ```
 
 You can optionally edit the `.config` I provided (or make your own entirely) running `ct-ng menuconfig`.  See the man page for more.
 
-On my Rpi4 with 4G of RAM, it took 2h 22m to build the armv7h toolchain and 2h 36m to build the [aarch64](https://archlinuxarm.org/forum/viewtopic.php?f=67&t=14096) toolchain.
+On my Rpi4 with 4G of RAM, it took 2h 22m to build the armv7h toolchain and 2h 46m to build the [aarch64](https://archlinuxarm.org/forum/viewtopic.php?f=67&t=14096) toolchain.
+
+When finished, you should have the toolchain under `$BUILDDIR/x86_64-pc-linux-gnu/`
 
 ### Check for needed symlinks
 Double check that the needed symlinks are present under `x-tools86/x86_64-pc-linux-gnu/bin` and create them if not.

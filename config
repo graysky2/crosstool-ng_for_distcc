@@ -280,7 +280,7 @@ CT_LINUX_V_5_4=y
 # CT_LINUX_V_3_4 is not set
 # CT_LINUX_V_3_2 is not set
 # CT_LINUX_NO_VERSIONS is not set
-CT_LINUX_VERSION="5.4.41"
+CT_LINUX_VERSION="5.4.48"
 CT_LINUX_MIRRORS="$(CT_Mirrors kernel.org linux ${CT_LINUX_VERSION})"
 CT_LINUX_ARCHIVE_FILENAME="@{pkg_name}-@{version}"
 CT_LINUX_ARCHIVE_DIRNAME="@{pkg_name}-@{version}"
@@ -332,7 +332,8 @@ CT_BINUTILS_PATCH_GLOBAL=y
 # CT_BINUTILS_PATCH_LOCAL_BUNDLED is not set
 # CT_BINUTILS_PATCH_NONE is not set
 CT_BINUTILS_PATCH_ORDER="global"
-CT_BINUTILS_V_2_34=y
+CT_BINUTILS_V_2_35=y
+# CT_BINUTILS_V_2_34 is not set
 # CT_BINUTILS_V_2_33 is not set
 # CT_BINUTILS_V_2_32 is not set
 # CT_BINUTILS_V_2_31 is not set
@@ -342,7 +343,7 @@ CT_BINUTILS_V_2_34=y
 # CT_BINUTILS_V_2_27 is not set
 # CT_BINUTILS_V_2_26 is not set
 # CT_BINUTILS_NO_VERSIONS is not set
-CT_BINUTILS_VERSION="2.34"
+CT_BINUTILS_VERSION="2.35"
 CT_BINUTILS_MIRRORS="$(CT_Mirrors GNU binutils) $(CT_Mirrors sourceware binutils/releases)"
 CT_BINUTILS_ARCHIVE_FILENAME="@{pkg_name}-@{version}"
 CT_BINUTILS_ARCHIVE_DIRNAME="@{pkg_name}-@{version}"
@@ -409,7 +410,8 @@ CT_GLIBC_PATCH_GLOBAL=y
 # CT_GLIBC_PATCH_LOCAL_BUNDLED is not set
 # CT_GLIBC_PATCH_NONE is not set
 CT_GLIBC_PATCH_ORDER="global"
-CT_GLIBC_V_2_31=y
+CT_GLIBC_V_2_32=y
+# CT_GLIBC_V_2_31 is not set
 # CT_GLIBC_V_2_30 is not set
 # CT_GLIBC_V_2_29 is not set
 # CT_GLIBC_V_2_28 is not set
@@ -422,7 +424,7 @@ CT_GLIBC_V_2_31=y
 # CT_GLIBC_V_2_17 is not set
 # CT_GLIBC_V_2_12_1 is not set
 # CT_GLIBC_NO_VERSIONS is not set
-CT_GLIBC_VERSION="2.31"
+CT_GLIBC_VERSION="2.32"
 CT_GLIBC_MIRRORS="$(CT_Mirrors GNU glibc)"
 CT_GLIBC_ARCHIVE_FILENAME="@{pkg_name}-@{version}"
 CT_GLIBC_ARCHIVE_DIRNAME="@{pkg_name}-@{version}"
@@ -531,7 +533,7 @@ CT_GCC_V_10=y
 # CT_GCC_V_7 is not set
 # CT_GCC_V_6 is not set
 # CT_GCC_NO_VERSIONS is not set
-CT_GCC_VERSION="10.1.0"
+CT_GCC_VERSION="10.2.0"
 CT_GCC_MIRRORS="$(CT_Mirrors GNU gcc/gcc-${CT_GCC_VERSION}) $(CT_Mirrors sourceware gcc/releases/gcc-${CT_GCC_VERSION})"
 CT_GCC_ARCHIVE_FILENAME="@{pkg_name}-@{version}"
 CT_GCC_ARCHIVE_DIRNAME="@{pkg_name}-@{version}"
@@ -637,10 +639,11 @@ CT_GETTEXT_PATCH_GLOBAL=y
 # CT_GETTEXT_PATCH_LOCAL_BUNDLED is not set
 # CT_GETTEXT_PATCH_NONE is not set
 CT_GETTEXT_PATCH_ORDER="global"
-CT_GETTEXT_V_0_20_1=y
+CT_GETTEXT_V_0_21=y
+# CT_GETTEXT_V_0_20_1 is not set
 # CT_GETTEXT_V_0_19_8_1 is not set
 # CT_GETTEXT_NO_VERSIONS is not set
-CT_GETTEXT_VERSION="0.20.2"
+CT_GETTEXT_VERSION="0.21"
 CT_GETTEXT_MIRRORS="$(CT_Mirrors GNU gettext)"
 CT_GETTEXT_ARCHIVE_FILENAME="@{pkg_name}-@{version}"
 CT_GETTEXT_ARCHIVE_DIRNAME="@{pkg_name}-@{version}"
@@ -782,7 +785,7 @@ CT_MPFR_PATCH_ORDER="global"
 CT_MPFR_V_4_0=y
 # CT_MPFR_V_3_1 is not set
 # CT_MPFR_NO_VERSIONS is not set
-CT_MPFR_VERSION="4.0.2"
+CT_MPFR_VERSION="4.1.0"
 CT_MPFR_MIRRORS="http://www.mpfr.org/mpfr-${CT_MPFR_VERSION} $(CT_Mirrors GNU mpfr)"
 CT_MPFR_ARCHIVE_FILENAME="@{pkg_name}-@{version}"
 CT_MPFR_ARCHIVE_DIRNAME="@{pkg_name}-@{version}"
