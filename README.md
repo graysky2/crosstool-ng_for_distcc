@@ -4,16 +4,16 @@ Build your own toolchain with crosstool-ng for Arch ARM volunteers to help build
 ## Real speed gains compiling x86-64 can be realized with ARM volunteers
 The following examples illustrate that real and additive gains can be realized when compiling x86-64 code using up to 2 RPi4B in the distcc cluster. The two compile tasks shown below used a x86-64 host alone, then the x86-64 host with 1x RPi4, then the x86-64 host with 2x RPi4s.
 
-* Hostname mars was an Intel i7-4790k (quad core) running Arch Linux (x86_64).
-* Hostname phobos was a Raspberry Pi 4B with 4G of RAM running Arch ARM (armv7h).
-* Hostname deimos was a Raspberry Pi 4B with 2G of RAM running Arch ARM (armv7h).
+* mars was an Intel i7-4790k (quad core) running Arch Linux (x86_64).
+* phobos was a Raspberry Pi 4B with 4G of RAM running Arch ARM (armv7h).
+* deimos was a Raspberry Pi 4B with 2G of RAM running Arch ARM (armv7h).
 
 ### Technical details
 Here are the env vars used on mars (the x86_64 client).  It is important to note that both the `--localslots=` and `--localslots_cpp=` are required to achieve good results.
 
 ```
 export MAKEFLAGS='-j28'
-export DISTCC_HOSTS="localhost/9 --localslots=16 --localslots_cpp=16 phobos/9 deimos/9"
+export DISTCC_HOSTS="localhost/9 --localslots=16 --localslots_cpp=16 phobos/5 deimos/5"
 ```
 
 Also know that for the kernel, two extra variables are needed on the make line in order to get distccd to parallelize the work:
@@ -89,9 +89,9 @@ wget -O .config https://github.com/graysky2/crosstool-ng_for_distcc/blob/master/
 ct-ng build
 ```
 
-You can optionally edit the `.config` I provided (or make your own entirely) running `ct-ng menuconfig`.  See the man page for more.
+You can optionally edit the `.config` I provided (or make your own entirely) running `ct-ng nconfig`.  See the man page for more.
 
-On my Rpi4 with 4G of RAM, it took 2h 22m to build the armv7h toolchain and 2h 46m to build the [aarch64](https://archlinuxarm.org/forum/viewtopic.php?f=67&t=14096) toolchain.
+On my RPi4, it took 2h 22m to build the armv7h toolchain and 2h 46m to build the [aarch64](https://archlinuxarm.org/forum/viewtopic.php?f=67&t=14096) toolchain.
 
 When finished, you should have the toolchain under `$BUILDDIR/x86_64-pc-linux-gnu/`
 
