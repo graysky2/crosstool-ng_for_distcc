@@ -12,7 +12,7 @@ The following examples illustrate that real and additive gains can be realized w
 Here are the env vars used on mars (the x86_64 client).  It is important to note that both the `--localslots=` and `--localslots_cpp=` are required to achieve good results.
 
 ```
-export MAKEFLAGS='-j28'
+export MAKEFLAGS='-50'
 export DISTCC_HOSTS="localhost/9 --localslots=16 --localslots_cpp=16 phobos/5 deimos/5"
 ```
 
