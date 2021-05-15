@@ -11,7 +11,6 @@ CT_BINUTILS_LD_WRAPPER=y
 CT_BINUTILS_PLUGINS=y
 CT_BINUTILS_EXTRA_CONFIG_ARRAY="--enable-relro"
 CT_GLIBC_EXTRA_CONFIG_ARRAY="--enable-add-ons"
-# CT_GLIBC_ENABLE_OBSOLETE_RPC is not set
 CT_GLIBC_KERNEL_VERSION_NONE=y
 CT_CC_GCC_CORE_EXTRA_CONFIG_ARRAY="--enable-default-pie --enable-default-ssp"
 CT_CC_GCC_EXTRA_CONFIG_ARRAY="--enable-default-pie --enable-default-ssp"
