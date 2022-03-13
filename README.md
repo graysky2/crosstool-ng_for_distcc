@@ -1,7 +1,7 @@
 # crosstool-ng_for_distcc
-Build your own toolchain with crosstool-ng for Arch ARM volunteers to help build x86_64 stuff.
+Use Arch ARM volunteers to help build x86_64 stuff.
 
-## Real speed gains compiling x86-64 can be realized with ARM volunteers
+## Rationale: speed gains compiling x86-64 can be realized with ARM volunteers
 The following examples illustrate that real and additive gains can be realized when compiling x86-64 code using up to 2 RPi4B in the distcc cluster. The two compile tasks shown below used a x86-64 host alone, then the x86-64 host with 1x RPi4, then the x86-64 host with 2x RPi4s.
 
 * mars was an Intel i7-4790k (quad core) running Arch Linux (x86_64).
@@ -82,7 +82,7 @@ On the Arch ARM device, build and install [crosstool-ng-git](https://aur.archlin
 Take the [config](https://github.com/graysky2/crosstool-ng_for_distcc/blob/master/config) file from this repo and run the build:
 
 ```
-$BUILDDIR=/scratch/ct_build
+BUILDDIR=/scratch/ct_build
 
 mkdir $BUILDDIR && cd $BUILDDIR
 wget -O .config https://github.com/graysky2/crosstool-ng_for_distcc/blob/master/config
